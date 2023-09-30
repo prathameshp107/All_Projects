@@ -1,0 +1,217 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    background-color: #87ceeb; /* Light blue background */
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Hide scrollbars */
+
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Hide scrollbars */
+}
+
+
+#panel {
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Hide scrollbars */
+}
+
+/* Ptop styles */
+#ptop {
+    height: 70px;
+    background-color: #67c943; /* Green background for ptop */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+}
+
+
+#elem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Bubble styles */
+#pbtm {
+    flex-grow: 1; /* Grow to occupy remaining space */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Game Over message styles */
+.hidden-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Ensure it's above other content */
+    visibility: hidden; /* Initially hidden */
+    opacity: 0; /* Initially transparent */
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.popup-content {
+    background-color: #f7f7f7; /* Light gray background */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Show the popup when needed */
+.show-popup {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Add more styles for attractive appearance */
+
+.bubble {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 150, 255, 0.7);
+    border-radius: 50%;
+    pointer-events: auto;
+    cursor: pointer;
+    animation: float 5s ease-in-out infinite;
+}
+
+
+
+
+/* ... (previous CSS code) */
+
+
+
+
+h2 {
+    color: #ff4500; /* Red heading color */
+    font-size: 28px;
+}
+
+p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+#final-score {
+    color: #007bff; /* Blue score color */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#play-again-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Hover effect for the Play Again button */
+#play-again-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* Game Over popup styles */
+.popup {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.popup-title {
+    font-size: 24px;
+    color: #e74c3c; /* Red title color */
+    margin-bottom: 10px;
+}
+
+.popup-score {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3498db; /* Blue score color */
+}
+
+.popup-button {
+    background-color: #2ecc71; /* Green button background color */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+
+/* Control panel styles */
+#control-panel {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    position: sticky;
+    top: 0;
+    background-color: #87ceeb; /* Background color with transparency */
+    z-index: 1; /* Ensure it's above other content */
+    width: 100%; /* Take up full width */
+    align-items: center;
+}
+
+
+/* Control button styles */
+.control-button {
+    background-color: #3498db; /* Blue button background color */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hide scrollbars on smaller screens */
+@media (max-width: 768px) {
+    body {
+        overflow: auto;
+    }
+    #main, #panel, #pbtm {
+        overflow-y: auto;
+    }
+}
+
+
+
